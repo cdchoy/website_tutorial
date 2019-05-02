@@ -100,7 +100,7 @@ www.chrischoy.net
 
 3. Go to the respository Settings > Options > GitHub Pages
 
-~[Image of GitHub Pages section in Repo Settings][github pages]
+![Image of GitHub Pages section in Repo Settings][github pages]
 
 4. Change the custom domain to your website domain name (eg. chrischoy.net).
 5. Change the source to "gh-pages branch"
