@@ -4,9 +4,10 @@ Creating and hosting your own website can often be intimidating and inaccessible
 Students should come with their own laptop pre-installed with git. No prior knowledge required, but a basic understanding of Git will help.
 
 Examples of deliverables possible through the methods taught here:
-[chrischoy.net](www.chrischoy.net)
-[uchicagowintercare.com](www.uchicagowintercare.com)
-[giveusyourpassword.com](www.giveusyourpassword.com)
+
+* [chrischoy.net](http://www.chrischoy.net)
+* [uchicagowintercare.com](http://www.uchicagowintercare.com)
+* [giveusyourpassword.com](http://www.giveusyourpassword.com)
 
 ## Background
 
