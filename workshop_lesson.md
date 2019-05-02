@@ -17,7 +17,7 @@ Examples of deliverables possible through the methods taught here:
 
 **DISCLAIMER**: there are many, many, many ways to go about creating and hosting your own website outside of the ones mentioned here. What will be taught here is just what I've personally found to work well.
 
-## Background
+# Background
 
 Broadly, hosting your own website requires 3 key elements:
 
@@ -31,7 +31,7 @@ The price you pay 3rd party sites is for them to bundle these elements up for yo
 2. **Server** hosting will be done by GitHub for free
 3. **Domain Name** will be purchased through GoogleDomains
 
-## Setting up the GitHub Repo
+# Setting up the GitHub Repo
 
 GitHub is a fantastic means for hosting code with good version control. Additionally, GitHub even supports hosting your own website files. For free, each account is given [[username]].github.io as a url they can host on.
 
@@ -63,7 +63,7 @@ However, what if you want to host multiple personal websites for cheap? Or what 
 
 To do this, we'll want just our http files to be hosted on GitHub and our Domain name to be determined elsewhere. Before we get into doing this, let's take a quick detour into getting you your own domain name!
 
-## Setting up your Domain Name
+# Setting up your Domain Name
 
 There are a lot of third-parties that sell domain names. My preferred provider is Google Domains because it's easy to use and provides additional resources like subdomain redirects and custom emails for free! The only downside is the cost. The cost being a very affordable $12/yr (*usually. popular domain names and domain names held by scalpers can cost a lot more*).
 
@@ -86,7 +86,7 @@ $ dig www.trentyang.com +nostats +nocomments +nocmd
 9. Take some time to explore the functionality of Google domains. Try setting up a custom email address and subdomain redirect to your GitHub!
 
 
-## Linking a GitHub Repo to a Custom Google Domain
+# Linking a GitHub Repo to a Custom Google Domain
 
 Let's head back into GitHub and create a new repository that will hold the files for your new website.
 
@@ -107,7 +107,7 @@ www.chrischoy.net
 
 **Note**: at this point, you have the ability to write your own website content and host it on your own custom domain. Just stop at this part of the tutorial and add an index.html file for your site to read from.
 
-## Using Hugo
+# Using Hugo
 
 There are a lot of ways to generate professional looking website pages. You could code your own from scratch, use a third-party interface (like [Wordpress](https://wordpress.com/)), or use a static-site generator (like [Jekyll](https://jekyllrb.com/)). For our purposes, we'll be using the free and easy-to-use static-site generator, [Hugo](https://gohugo.io/). I say easy-to-use because of the way it plays nicely with GitHub and the way it requires little-to-no HTML knowledge.
 
@@ -154,6 +154,20 @@ $ git push
 
 13. Re-update the custom domain to your website domain name (eg. chrischoy.net). **NOTE** this step must be done everytime you re-publish your website. It's a bit of a pain, but gives us some luxuries like having both our Hugo files and HTML files in the same repo.
 
+14. Open an incognito tab and navigate to your website. You should see all of your content there within a few minutes at most!
+
+# Congratulations!
+
+You've successfully:
+
+* Hosted a free site on GitHub
+* Purchased your own domain name
+* Linked it to your GitHub website files using DNS records
+* Generated customizable, professional-looking content using a static-site generator like Hugo
+
+Going forward, you can further customize your config.yaml or get into the nitty-gritty HTML/CSS files within the theme for fuller customization. You can also read up on more Hugo documentation for how everything works together within the generator.
+
+Everytime you want to publish your changes to your website, don't forget to run the publish script and update the GitHub custom domain name!
 
 
 [dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/imgs/google%20domains%20dns%20records.png
