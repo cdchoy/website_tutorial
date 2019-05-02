@@ -35,7 +35,22 @@ GitHub is a fantastic means for hosting code with good version control. Addition
 
 Here, we'll create a repository with a simple index.html file to start with.
 
-1. Create a new repository
+1. Create a new repository and name it specifically **_your username_.github.io**
+2. Create new file and call it specifically **index.html**
+3. Copy and Paste in the following code to your index file
+
+'''html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page</title>
+</head>
+
+<body>
+<h1> Hello World! </h1>
+</body>
+</html>
+'''
 
 ## Setting up your Domain Name
 
