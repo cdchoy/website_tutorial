@@ -1,7 +1,7 @@
 # Create and Host your own Website
 Creating and hosting your own website can often be intimidating and inaccessible due to paywalls or inexperience with coding.
 
-Sites like SquareSpace will charge you $144/year and sites like GoDaddy will charge you $15/year with pricey add-ons that should really just come with owning the website. Additionally, many of the features they do provide are functionally useless for those aiming to host something simple like a static portfolio website. For those willing to invest an extra hour of their time, there IS an easier and cheaper way that will give them full control over their website and its contents.
+Sites like [SquareSpace](https://www.squarespace.com/pricing/) will charge you $144/year and sites like [GoDaddy](https://www.godaddy.com/websites/website-builder/plans-and-pricing) will charge you $72/year with pricey add-ons that should really just come with owning the website. Additionally, many of the features they do provide are functionally useless for those aiming to host something simple like a static portfolio website. For those willing to invest an extra hour of their time, there IS an easier and cheaper way that will give them full control over their website and its contents.
 
 This workshop will cover using Hugo to generate professional-looking HTML content from easy-to-write yaml files and using GitHub + Google Domains to host your website content for $0-12 per year! 
 
@@ -64,4 +64,10 @@ To do this, we'll want just our http files to be hosted on GitHub and our Domain
 There are a lot of third-parties that sell domain names. My preferred provider is Google Domains because it's easy to use and provides additional resources like subdomain redirects and custom emails for free!
 
 
+## Setting up your GitHub Repo (part 2)
+
 ## Using Hugo
+
+There are a lot of ways to generate professional looking website pages. You could code your own from scratch, use a third-party interface (like [Wordpress](https://wordpress.com/)), or use a static-site generator (like [Jekyll](https://jekyllrb.com/)). For our purposes, we'll be using the free and easy-to-use static-site generator, [Hugo](https://gohugo.io/). I say easy-to-use because of the way it plays nicely with GitHub and the way it requires little-to-no HTML knowledge.
+
+So, let's get into it and follow Hugo's quickstart tutorial: [Hugo's Quick Start Page](https://gohugo.io/getting-started/quick-start/)
