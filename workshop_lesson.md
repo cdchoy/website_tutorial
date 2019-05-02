@@ -76,15 +76,34 @@ There are a lot of third-parties that sell domain names. My preferred provider i
 ![Image of Google Domains DNS Records location][dns_records]
 
 6. Input your resource records. What these do is basically tell anyone who tries to access your domain name where to check for your website files. A tutorial for this can be found [here](https://help.github.com/en/articles/setting-up-an-apex-domain). Specifically, we're interested in the **A** records at the bottom.
-7. Check that these records have been set up correctly using the following terminal command:
+7. Like in the above image, you should also add a CNAME record with your [[github username]].github.io.
+8. Check that these records have been set up correctly using the following terminal command:
 
 ```bash
 $ dig www.trentyang.com +nostats +nocomments +nocmd
 ```
 
-[Tutorial](https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58)
+9. Take some time to explore the functionality of Google domains. Try setting up a custom email address and subdomain redirect to your GitHub!
 
-## Setting up your GitHub Repo (part 2)
+
+## Linking a GitHub Repo to a Custom Google Domain
+
+Let's head back into GitHub and create a new repository that will hold the files for your new website.
+
+1. Create a new repository. Name it whatever you want.
+2. Add a CNAME file and put in the following text formatted to your domain name you just bought. The name you first list will be what is displayed in the browser url bar when anyone navigates to your site. For example, try going to [www.chrischoy.net](http://www.chrischoy.net). It will automatically drop the www and resolve to just "chrischoy.net"
+
+```
+chrischoy.net  
+www.chrischoy.net  
+```
+
+3. Go to the respository Settings > Options > GitHub Pages
+4. Change the custom domain to your website domain name (eg. chrischoy.net).
+5. Change the source to "gh-pages branch"
+6. Clone your repository to your computer.
+
+**Note**: at this point, you have the ability to write your own website content and host it on your own custom domain. Just follow only steps 1-4 of this tutorial part and add an index.html file.
 
 ## Using Hugo
 
@@ -92,5 +111,50 @@ There are a lot of ways to generate professional looking website pages. You coul
 
 So, let's get into it and follow Hugo's quickstart tutorial: [Hugo's Quick Start Page](https://gohugo.io/getting-started/quick-start/)
 
+3. Add a "publish.sh" file and paste in the following script. This will be helpful later.
+
+```
+#!/bin/sh
+
+# publish.sh
+# Generates site using Hugo compiler then pushes it to gh-pages branch
+# The website pulls from our gh-pages branch to build itself.
+# Christopher Choy 2017
+
+DIR=/path/to/your/local/github/repo/folder/
+
+cd $DIR/
+
+# Check for uncommitted changes to the repository
+if [[ $(git status -s) ]]
+then
+    echo "The working directory is dirty. Please commit any pending changes."
+    exit 1;
+fi
+
+# Pull the gh-pages branch
+git pull
+
+# Delete the old publication of the website
+rm -rf public
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
+
+# Checking out gh-pages branch into public and clean it
+git worktree add -B gh-pages public origin/gh-pages
+rm -rf public/*
+
+# Generate the website
+hugo
+
+# Update the gh-pages branch with new website content
+cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
+
+# Push the updated branch to github
+git push origin gh-pages
+
+echo "\n\nPublish Complete. You must update the Custom Domain field in the Repo Settings:"
+```
 
 [dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/google%20domains%20dns%20records.png
