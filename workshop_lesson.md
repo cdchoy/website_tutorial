@@ -72,6 +72,9 @@ There are a lot of third-parties that sell domain names. My preferred provider i
 3. Find and purchase your very own domain!
 4. Navigate to your home page that lists out your owned domain names.
 5. Click on "Manage". Navigate to the sidebar and go to DNS > Custom Resource Records
+
+![Image of Google Domains DNS Records location][dns_records]
+
 6. Input your resource records. What these do is basically tell anyone who tries to access your domain name where to check for your website files. A tutorial for this can be found [here](https://help.github.com/en/articles/setting-up-an-apex-domain). Specifically, we're interested in the **A** records at the bottom.
 7. Check that these records have been set up correctly using the following terminal command:
 
@@ -88,3 +91,6 @@ $ dig www.trentyang.com +nostats +nocomments +nocmd
 There are a lot of ways to generate professional looking website pages. You could code your own from scratch, use a third-party interface (like [Wordpress](https://wordpress.com/)), or use a static-site generator (like [Jekyll](https://jekyllrb.com/)). For our purposes, we'll be using the free and easy-to-use static-site generator, [Hugo](https://gohugo.io/). I say easy-to-use because of the way it plays nicely with GitHub and the way it requires little-to-no HTML knowledge.
 
 So, let's get into it and follow Hugo's quickstart tutorial: [Hugo's Quick Start Page](https://gohugo.io/getting-started/quick-start/)
+
+
+[dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/google%20domains%20dns%20records.png
