@@ -1,9 +1,11 @@
 # Create and Host your own Website
 Creating and hosting your own website can often be intimidating and inaccessible due to paywalls or inexperience with coding.
 
-Sites like [SquareSpace](https://www.squarespace.com/pricing/) will charge you $144/year and sites like [GoDaddy](https://www.godaddy.com/websites/website-builder/plans-and-pricing) will charge you $72/year with pricey add-ons that should really just come with owning the website. Additionally, many of the features they do provide are functionally useless for those aiming to host something simple like a static portfolio website. For those willing to invest an extra hour of their time, there IS an easier and cheaper way that will give them full control over their website and its contents.
+Sites like [SquareSpace](https://www.squarespace.com/pricing/) will charge you $144/year and sites like [GoDaddy](https://www.godaddy.com/websites/website-builder/plans-and-pricing) will charge you $72/year with pricey add-ons that should really just come with owning the website. Additionally, many of the features they do provide are functionally useless for those aiming to host something simple like a static portfolio website. For many, the only allure they offer is the professional look they can provide those with no knowledge of HTML.
 
-This workshop will cover using Hugo to generate professional-looking HTML content from easy-to-write yaml files and using GitHub + Google Domains to host your website content for $0-12 per year! 
+For those willing to invest an extra hour of their time, there IS an easier and cheaper way that will give them full control over their website and its contents.
+
+This workshop will cover using Hugo to generate professional-looking HTML content from easy-to-write yaml files and using GitHub + Google Domains to host your website content for only $0-12 per year! 
 
 Students should come with their own laptop pre-installed with git. No prior knowledge required, but a basic understanding of Git will help.
 
@@ -55,14 +57,29 @@ Here, we'll create a repository with a simple index.html file to start with.
 
 4. Go to **_your username_.github.io** as if it were a website. You should see the content that we just created! (Note: it may take a bit for changes to propagate. If you visited the site recently, old website files may still be cached, so try opening the page in an incognito tab)
 
-This is all very cool, and if you're satisfied with this, then you're already done! However, what if you want to host multiple personal websites for cheap? Or what if you specifically want a cool domain name like [bobross.com](http://bobross.com)?
+This is all very cool, and if you're satisfied with this, then you're already done! You now have a way to customize and host your own website at **$0/year**! 
+
+However, what if you want to host multiple personal websites for cheap? Or what if you specifically want a cool domain name like [bobross.com](http://bobross.com)? Or what if you want a more professional looking website without getting into the nitty-gritty of writing your own thousand-line CSS files?
 
 To do this, we'll want just our http files to be hosted on GitHub and our Domain name to be determined elsewhere. Before we get into doing this, let's take a quick detour into getting you your own domain name!
 
 ## Setting up your Domain Name
 
-There are a lot of third-parties that sell domain names. My preferred provider is Google Domains because it's easy to use and provides additional resources like subdomain redirects and custom emails for free!
+There are a lot of third-parties that sell domain names. My preferred provider is Google Domains because it's easy to use and provides additional resources like subdomain redirects and custom emails for free! The only downside is the cost. The cost being a very affordable $12/yr (*usually. popular domain names and domain names held by scalpers can cost a lot more*).
 
+1. Go to domains.google.com
+2. Navigate to "Get a new domain"
+3. Find and purchase your very own domain!
+4. Navigate to your home page that lists out your owned domain names.
+5. Click on "Manage". Navigate to the sidebar and go to DNS > Custom Resource Records
+6. Input your resource records. What these do is basically tell anyone who tries to access your domain name where to check for your website files. A tutorial for this can be found [here](https://help.github.com/en/articles/setting-up-an-apex-domain). Specifically, we're interested in the **A** records at the bottom.
+7. Check that these records have been set up correctly using the following terminal command:
+
+```bash
+$ dig www.trentyang.com +nostats +nocomments +nocmd
+```
+
+[Tutorial](https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58)
 
 ## Setting up your GitHub Repo (part 2)
 
