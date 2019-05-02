@@ -99,6 +99,9 @@ www.chrischoy.net
 ```
 
 3. Go to the respository Settings > Options > GitHub Pages
+
+~[Image of GitHub Pages section in Repo Settings][github pages]
+
 4. Change the custom domain to your website domain name (eg. chrischoy.net).
 5. Change the source to "gh-pages branch"
 6. Clone your repository to your computer.
@@ -158,3 +161,4 @@ echo "\n\nPublish Complete. You must update the Custom Domain field in the Repo 
 ```
 
 [dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/google%20domains%20dns%20records.png
+[github pages]: https://github.com/cchoy96/website_tutorial/blob/master/Github%20Custom%20Domain.png
