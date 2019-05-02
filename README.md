@@ -4,4 +4,4 @@ Creating and hosting your own website can often be intimidating and inaccessible
 
 Students should come with their own laptop pre-installed with git. No prior knowledge required, but a basic understanding of Git will help.
 
-See [website_workshop.md](./website_workshop.md) for the lesson write-up!
+See [workshop_lesson.md](./workshop_lesson.md) for the lesson write-up!
