@@ -103,10 +103,9 @@ www.chrischoy.net
 ![Image of GitHub Pages section in Repo Settings][github pages]
 
 4. Change the custom domain to your website domain name (eg. chrischoy.net).
-5. Change the source to "gh-pages branch"
-6. Clone your repository to your computer.
+5. Clone the repository to your computer
 
-**Note**: at this point, you have the ability to write your own website content and host it on your own custom domain. Just follow only steps 1-4 of this tutorial part and add an index.html file.
+**Note**: at this point, you have the ability to write your own website content and host it on your own custom domain. Just stop at this part of the tutorial and add an index.html file for your site to read from.
 
 ## Using Hugo
 
@@ -146,6 +145,14 @@ $ git add --all
 $ git commit -am "init hugo files"
 $ git push
 ```
+
+10. Run the publish script. This will do some Git Branch magic to build our site into a separate repo branch called **gh-pages**.
+
+11. Go back to the respository Settings > Options > GitHub Pages
+
+12. Change the source to "gh-pages branch"
+
+13. Re-update the custom domain to your website domain name (eg. chrischoy.net). **NOTE** this step must be done everytime you re-publish your website. It's a bit of a pain, but gives us some luxuries like having both our Hugo files and HTML files in the same repo.
 
 
 
