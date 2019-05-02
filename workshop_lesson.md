@@ -112,9 +112,32 @@ www.chrischoy.net
 
 There are a lot of ways to generate professional looking website pages. You could code your own from scratch, use a third-party interface (like [Wordpress](https://wordpress.com/)), or use a static-site generator (like [Jekyll](https://jekyllrb.com/)). For our purposes, we'll be using the free and easy-to-use static-site generator, [Hugo](https://gohugo.io/). I say easy-to-use because of the way it plays nicely with GitHub and the way it requires little-to-no HTML knowledge.
 
-So, let's get into it and follow Hugo's quickstart tutorial: [Hugo's Quick Start Page](https://gohugo.io/getting-started/quick-start/)
+So, let's get into it. We'll be loosely following [Hugo's quickstart tutorial](https://gohugo.io/getting-started/quick-start/).
 
-3. Add a "publish.sh" file and paste in the following script. This will be helpful later.
+1. Install Hugo for your OS by following the instructions [here](https://gohugo.io/getting-started/installing)
+2. Navigate into your cloned repository and create a new hugo site within the repository folder with:
+
+```bash
+$ hugo new site . --force
+```
+
+3. Find a theme you like on [themes.gohugo.io](https://themes.gohugo.io/) (you can also make your own theme following Hugo's instructions)
+4. Navigate into your themes folder and install the desired theme following their Git Clone instructions. The example below uses the [ananke](https://themes.gohugo.io/gohugo-theme-ananke/) theme.
+
+```
+$ cd themes
+$ git clone https://github.com/budparr/gohugo-theme-ananke.git
+```
+
+5. Navigate to the exampleSite folder and copy the **config.toml** file to the root of your repository. There should already be a config.toml file there, just replace it or copy in the desired content. The config.toml file is the main file through which you will make changes to your website.
+6. Edit the config.toml file. Correct the themesDir and baseURL fields especially!
+7. Run the site locally on your machine with
+
+```
+$ hugo serve -D
+```
+
+8. Add a "publish.sh" file to the root of your repository and paste in the following script.
 
 ```
 #!/bin/sh
@@ -159,6 +182,16 @@ git push origin gh-pages
 
 echo "\n\nPublish Complete. You must update the Custom Domain field in the Repo Settings:"
 ```
+
+8. Commit and push our GitHub changes thus far
+
+```
+$ git add --all
+$ git commit -am "init hugo files"
+$ git push
+```
+
+
 
 [dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/google%20domains%20dns%20records.png
 [github pages]: https://github.com/cchoy96/website_tutorial/blob/master/Github%20Custom%20Domain.png
