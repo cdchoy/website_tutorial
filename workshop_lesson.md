@@ -39,20 +39,29 @@ Here, we'll create a repository with a simple index.html file to start with.
 2. Create new file and call it specifically **index.html**
 3. Copy and Paste in the following code to your index file
 
-'''html
+```html
 <!DOCTYPE html>
-<html>
-<head>
-<title>Home Page</title>
-</head>
+  <html>
+    <head>
+      <title>Home Page</title>
+    </head>
 
-<body>
-<h1> Hello World! </h1>
-</body>
+    <body>
+      <h1> Hello World! </h1>
+      <h2> This is my very own website! </h2>
+    </body>
 </html>
-'''
+```
+
+4. Go to **_your username_.github.io** as if it were a website. You should see the content that we just created! (Note: it may take a bit for changes to propagate. If you visited the site recently, old website files may still be cached, so try opening the page in an incognito tab)
+
+This is all very cool, and if you're satisfied with this, then you're already done! However, what if you want to host multiple personal websites for cheap? Or what if you specifically want a cool domain name like [bobross.com](http://bobross.com)?
+
+To do this, we'll want just our http files to be hosted on GitHub and our Domain name to be determined elsewhere. Before we get into doing this, let's take a quick detour into getting you your own domain name!
 
 ## Setting up your Domain Name
+
+There are a lot of third-parties that sell domain names. My preferred provider is Google Domains because it's easy to use and provides additional resources like subdomain redirects and custom emails for free!
 
 
 ## Using Hugo
