@@ -156,6 +156,6 @@ $ git push
 
 
 
-[dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/google%20domains%20dns%20records.png
-[github pages]: https://github.com/cchoy96/website_tutorial/blob/master/Github%20Custom%20Domain.png
+[dns_records]: https://github.com/cchoy96/website_tutorial/blob/master/imgs/google%20domains%20dns%20records.png
+[github pages]: https://github.com/cchoy96/website_tutorial/blob/master/imgs/Github%20Custom%20Domain.png
 [script]: https://github.com/cchoy96/website_tutorial/blob/master/publish.sh
