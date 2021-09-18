@@ -121,11 +121,10 @@ $ hugo new site . --force
 ```
 
 3. Find a theme you like on [themes.gohugo.io](https://themes.gohugo.io/) (you can also make your own theme following Hugo's instructions)
-4. Navigate into your themes folder and install the desired theme following their Git Clone instructions. The example below uses the [ananke](https://themes.gohugo.io/gohugo-theme-ananke/) theme.
+4. Navigate into your themes folder and install the desired theme following their Git Submodule instructions. The example below uses the [ananke](https://themes.gohugo.io/gohugo-theme-ananke/) theme. You can also clone it in, but having it as a submodule makes it much easier to update in the future.
 
 ```
-$ cd themes
-$ git clone https://github.com/budparr/gohugo-theme-ananke.git
+$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 ```
 
 5. Navigate to the exampleSite folder and copy the **config.toml** file to the root of your repository. There should already be a config.toml file there, just replace it or copy in the desired content. The config.toml file is the main file through which you will make changes to your website.
